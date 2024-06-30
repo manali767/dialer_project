@@ -1,38 +1,357 @@
-.App {
-  text-align: center;
-}
+/**************************** Login ****************************/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.login {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
+}
+
+.left {
+  height: 100vh;
+  width: 40%;
+  background-image: url("../public/bokeh-background_23-2148496025.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.4;
+  left: 0;
+}
+
+.right {
+  height: 100vh;
+  width: 60%;
+  background-image: url("../public/dialer_image.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  opacity: 0.6;
+}
+
+.login_card {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 0px solid;
+  border-radius: 20px;
+  padding: 20px;
+  width: 30%;
+}
+
+.login_card span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login_form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.login_button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.or {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+hr {
+  width: 45%;
+  height: 0.1px;
+}
+
+.or span {
+  padding: 0px 20px;
+}
+
+/******************************* Dashboard *********************************/
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left_sidebar {
+  padding: 20px;
+  background-color: #304463;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.tab h4,
+.tabs h4 {
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 40px;
+}
+
+.tab {
+  background-color: rgba(246, 245, 242, 0.5);
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 10px 30px 10px 20px;
+  display: flex;
+}
+
+.heading {
+  opacity: 1 !important;
+  color: white;
+}
+
+.phone_logo {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid;
+  color: white;
+  border-radius: 50%;
+}
+
+.right_sidebar .text {
+  border: 1px solid gray;
+  margin-top: 20px;
+  border-right-style: none;
+  border-left-style: none;
+  background-color: white;
+}
+
+.content {
+  background-color: #f7f9f2;
+  padding-top: 10px;
+}
+
+.images svg {
+  width: 20px;
+  height: 20px;
+}
+
+.images .phone_filled {
+  color: green;
+}
+
+.content :where(.css-dev-only-do-not-override-m4timi).ant-form-item {
+  margin-bottom: 0px !important;
+}
+
+.tabs {
+  display: flex;
+  padding: 10px 30px 10px 20px;
+}
+
+.phone_outlined svg {
+  color: white !important;
+}
+
+/********************************** Modal ********************************/
+
+.right-side-modal .ant-modal {
+  top: 0;
+  right: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.right-side-modal .ant-modal-content {
+  height: fit-content;
+  background-color: #304463;
+  width: fit-content;
+}
+
+.right-side-modal .ant-modal {
+  position: fixed;
+}
+
+.dialer-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 140px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer .anticon {
+  justify-content: center !important;
+}
+
+.footer .anticon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.dialer-buttons .ant-btn {
+  font-size: 16px;
+  border: 0px solid;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.custom-input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.custom-input:-ms-input-placeholder {
+  color: white;
+}
+
+.custom-input::-ms-input-placeholder {
+  color: white;
+}
+
+.custom-dropdown .ant-select-item {
+  background-color: transparent !important;
+  /* color: white !important; */
+}
+
+:where(.css-dev-only-do-not-override-m4timi).ant-select-dropdown {
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-m4timi).ant-select-dropdown
+  .ant-select-item {
+  color: white !important;
+}
+
+.phone {
+  margin: 0 auto;
+  border: none;
+  padding: 15px;
+}
+
+.dialers {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialer-logo-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  row-gap: 30px;
+  margin-top: 100px;
+}
+
+.dialer-logo-buttons
+  :where(.css-dev-only-do-not-override-m4timi).ant-btn-default {
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.dialer-logo-buttons .anticon {
+  justify-content: center;
+}
+
+.dialer-logo-buttons svg {
+  width: 20px;
+  height: 20px;
+}
+
+.caller_id {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+:where(.css-dev-only-do-not-override-m4timi).ant-modal {
+  width: fit-content !important;
+}
+
+.icons svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+}
+
+.icons_dashboard {
+  color: black !important;
+}
+
+.icons .ant-btn svg {
+  margin-right: 0px;
+}
+
+.icons .ant-btn {
+  margin-right: 30px;
+}
+
+.icons {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ant-modal-close svg{
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  :where(.css-dev-only-do-not-override-m4timi).ant-modal {
+    float: right !important;
+    margin-right: 90px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 992px) {
+  .login_card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form_line {
+    flex-direction: column;
+  }
+  .switch {
+    margin-top: 20px;
+  }
+  .login_card {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .switch {
+    flex-direction: column;
+  }
+  .login_card {
+    width: 70%;
   }
 }
