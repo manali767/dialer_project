@@ -130,6 +130,11 @@ const ModalPage: React.FC = () => {
     setDropdownVisible(false);
   };
 
+  const handleButtonClick = (digit: string) => {
+    console.log(typeof(digit), digit);
+    dispatch(setInputValue(inputValue + digit));
+  };
+
   return (
     <div className="right_sidebar">
       <div className="icons">
@@ -299,9 +304,9 @@ const ModalPage: React.FC = () => {
             <div className="dialer-buttons">
               {["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"].map(
                 (digit) => (
-                  <Button key={digit} className="dialer-button">
-                    {digit}
-                  </Button>
+                  <Button key={digit} className="dialer-button" onClick={() => handleButtonClick(digit)}>
+                  {digit}
+                </Button>
                 )
               )}
             </div>
